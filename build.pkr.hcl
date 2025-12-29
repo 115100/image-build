@@ -10,7 +10,7 @@ source "qemu" "build" {
     ["-device", "virtio-net,netdev=user.0,bus=pci.${var.iface_bus},addr=${var.iface_address}"],
   ]
   shutdown_timeout = "15m"
-  output_directory = "images"
+  output_directory = "output-${var.build_name}"
 
   efi_boot          = true
   efi_firmware_code = "/usr/share/edk2/OvmfX64/OVMF_CODE.secboot.fd"
