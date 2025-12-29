@@ -35,6 +35,7 @@ d-i preseed/late_command string in-target mkdir -p /home/user/.ssh; \
 	in-target chmod 0700 /home/user/.ssh; \
 	in-target chmod 0644 /home/user/.ssh/authorized_keys; \
 	in-target /bin/sh -c 'echo GRUB_CMDLINE_LINUX=\"console=ttyS0,115200n8r\" > /etc/default/grub.d/cmdline.cfg'; \
+	in-target /bin/sh -c 'echo GRUB_TERMINAL=console > /etc/default/grub.d/terminal.cfg'; \
 	in-target update-grub; \
 	in-target /bin/sh -c "echo 'ChallengeResponseAuthentication no' > /etc/ssh/sshd_config.d/50custom.conf"; \
 	in-target /bin/sh -c "echo 'PasswordAuthentication no' >> /etc/ssh/sshd_config.d/50custom.conf"; \
