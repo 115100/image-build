@@ -43,4 +43,4 @@ d-i preseed/late_command string \
 	in-target /bin/sh -c "echo 'PermitRootLogin no' >> /etc/ssh/sshd_config.d/50custom.conf"; \
 	in-target /bin/sh -c "echo 'PrintMotd no' >> /etc/ssh/sshd_config.d/50custom.conf"; \
 	in-target /bin/sh -c 'echo Y | apt modernize-sources'; \
-	in-target rm -f /etc/apt/sources.list.bak;
+	in-target rm -f /etc/apt/sources.list.bak /etc/apt/sources.list.d/moved-from-main.sources;
