@@ -29,7 +29,8 @@ d-i grub-installer/only_debian boolean true
 d-i finish-install/reboot_in_progress note
 d-i debian-installer/exit/poweroff boolean true
 
-d-i preseed/late_command string in-target mkdir -p /home/user/.ssh; \
+d-i preseed/late_command string \
+	in-target mkdir -p /home/user/.ssh; \
 	in-target /bin/sh -c "echo '${authorized_key}' >> /home/user/.ssh/authorized_keys"; \
 	in-target chown -R user:user /home/user/.ssh; \
 	in-target chmod 0700 /home/user/.ssh; \
@@ -40,4 +41,6 @@ d-i preseed/late_command string in-target mkdir -p /home/user/.ssh; \
 	in-target /bin/sh -c "echo 'ChallengeResponseAuthentication no' > /etc/ssh/sshd_config.d/50custom.conf"; \
 	in-target /bin/sh -c "echo 'PasswordAuthentication no' >> /etc/ssh/sshd_config.d/50custom.conf"; \
 	in-target /bin/sh -c "echo 'PermitRootLogin no' >> /etc/ssh/sshd_config.d/50custom.conf"; \
-	in-target /bin/sh -c "echo 'PrintMotd no' >> /etc/ssh/sshd_config.d/50custom.conf";
+	in-target /bin/sh -c "echo 'PrintMotd no' >> /etc/ssh/sshd_config.d/50custom.conf"; \
+	in-target /bin/sh -c 'echo Y | apt modernize-sources'; \
+	in-target rm -f /etc/apt/sources.list.bak;
