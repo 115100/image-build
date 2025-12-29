@@ -8,7 +8,7 @@ iso_checksum = "sha256:54701839b932f6dc5c23a38d54a9febffdfa4d147558ffa4fc587b15a
 
 http_content = {
   path = "/autoyast.xml"
-  tpl  = "files/autoyast.xml.tpl"
+  tpl  = "files/autoyast.xml.pkrtpl.hcl"
 }
 
 boot_command = [
