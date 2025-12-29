@@ -9,7 +9,7 @@ clean:
 	@rm -rf output-*
 
 SRCS = $(wildcard *.pkr.hcl)
-images/%.qcow2: vars/%.pkrvars.hcl $(SRCS)
+images/%.qcow2: vars/%.pkrvars.hcl templates/%.pkrtpl.hcl $(SRCS)
 	@rm -rf output-$*
 	@mkdir -p $(dir $@)
 	@packer build -var-file $< .

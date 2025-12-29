@@ -7,7 +7,7 @@ iso_checksum = "sha256:677c4d57aa034dc192b5191870141057574c1b05df2b9569c0ee08aa4
 
 http_content = {
   path = "/preseed.cfg"
-  tpl  = "files/preseed.cfg.pkrtpl.hcl"
+  tpl  = "templates/debian.pkrtpl.hcl"
 }
 boot_command = [
   "c<wait>",
