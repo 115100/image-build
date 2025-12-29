@@ -21,22 +21,6 @@
 	<drive>
 		<initialize config:type="boolean">true</initialize>
 		<use>all</use>
-		<partitions config:type="list">
-			<partition>
-				<create config:type="boolean">true</create>
-				<format config:type="boolean">true</format>
-				<filesystem config:type="symbol">fat</filesystem>
-				<mount>/boot/efi</mount>
-				<size>1000M</size>
-				<partition_id config:type="integer">259</partition_id>
-			</partition>
-			<partition>
-				<create config:type="boolean">true</create>
-				<format config:type="boolean">true</format>
-				<mount>/</mount>
-				<size>max</size>
-			</partition>
-		</partitions>
 	</drive>
 </partitioning>
 <language>
