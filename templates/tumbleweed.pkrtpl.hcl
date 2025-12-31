@@ -40,6 +40,27 @@
 		<package>patterns-glibc-hwcaps-x86_64_v3</package>
 	</packages>
 </software>
+<add-on>
+	<add_on_products config:type="list">
+		<listentry>
+			<media_url><![CDATA[http://download.opensuse.org/tumbleweed/repo/non-oss/]]></media_url>
+			<product>openSUSE-Addon-NonOss</product>
+			<alias>download.opensuse.org-non-oss</alias>
+			<name>Main Repository (NON-OSS)</name>
+		</listentry>
+		<listentry>
+			<media_url><![CDATA[http://download.opensuse.org/tumbleweed/repo/oss/]]></media_url>
+			<product>openSUSE</product>
+			<alias>download.opensuse.org-oss</alias>
+			<name>Main Repository (OSS)</name>
+		</listentry>
+		<listentry>
+			<media_url><![CDATA[http://download.opensuse.org/update/tumbleweed/]]></media_url>
+			<alias>download.opensuse.org-tumbleweed</alias>
+			<name>Main Update Repository</name>
+		</listentry>
+	</add_on_products>
+</add-on>
 <services-manager>
 	<services>
 		<enable config:type="list">
