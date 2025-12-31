@@ -12,7 +12,7 @@
 <bootloader>
 	<global>
 		<secure_boot>true</secure_boot>
-		<append>console=ttyS0,115200</append>
+		<append>console=ttyS0,115200n8r</append>
 		<serial>serial --speed=115200 --unit=0 --word=8 --parity=no --stop=1</serial>
 		<terminal>serial</terminal>
 	</global>
