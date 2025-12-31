@@ -35,10 +35,11 @@
 </keyboard>
 <software>
 	<do_online_update config:type="boolean">true</do_online_update>
-	<packages config:type="list">
-		<package>openssh</package>
-		<package>patterns-glibc-hwcaps-x86_64_v3</package>
-	</packages>
+	<patterns config:type="list">
+		<pattern>console</pattern>
+		<pattern>enhanced_base</pattern>
+		<pattern>x86_64_v3</pattern>
+	</patterns>
 </software>
 <add-on>
 	<add_on_products config:type="list">
