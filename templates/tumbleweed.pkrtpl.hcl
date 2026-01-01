@@ -98,7 +98,7 @@
 		<script>
 			<chrooted config:type="boolean">true</chrooted>
 			<source><![CDATA[
-systemctl enable --now transactional-update.timer transactional-update-cleanup.timer rebootmgr.service
+systemctl enable transactional-update.timer transactional-update-cleanup.timer rebootmgr.service
 ]]>
 			</source>
 		</script>
