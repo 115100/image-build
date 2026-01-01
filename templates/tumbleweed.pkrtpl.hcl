@@ -74,9 +74,6 @@
 </services-manager>
 <networking>
 	<backend>wicked</backend>
-	<dns>
-		<dhcp_hostname config:type="boolean">true</dhcp_hostname>
-	</dns>
 	<keep_install_network config:type="boolean">false</keep_install_network>
 	<interfaces config:type="list">
 		<interface>
