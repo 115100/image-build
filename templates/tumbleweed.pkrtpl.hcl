@@ -40,6 +40,9 @@
 		<pattern>enhanced_base</pattern>
 		<pattern>x86_64_v3</pattern>
 	</patterns>
+	<packages config:type="list">
+		<package>transactional-update</package>
+	</packages>
 </software>
 <add-on>
 	<add_on_products config:type="list">
@@ -93,10 +96,21 @@
 		<username>user</username>
 	</user>
 </users>
+<scripts>
+	<chroot-scripts config:type="list">
+		<script>
+			<chrooted config:type="boolean">true</chrooted>
+			<source><![CDATA[
+systemctl enable --now transactional-update.timer transactional-update-cleanup.timer rebootmgr.service
+]]>
+			</source>
+		</script>
+	</chroot-scripts>
+</scripts>
 <files config:type="list">
 	<file>
 		<file_path>/etc/ssh/sshd_config.d/9999999tumbleweed.conf</file_path>
-                <file_contents>
+			<file_contents>
 <![CDATA[ChallengeResponseAuthentication no
 PasswordAuthentication no
 PermitRootLogin no
