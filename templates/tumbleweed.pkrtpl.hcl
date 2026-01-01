@@ -136,6 +136,7 @@ PrintMotd no
 	<add_crash_kernel config:type="boolean">false</add_crash_kernel>
 </kdump>
 <firewall>
+	<log_denied_packets>unicast</log_denied_packets>
 	<zones config:type="list">
 		<zone>
 			<name>public</name>
