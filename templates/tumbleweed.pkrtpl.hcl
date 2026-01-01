@@ -109,7 +109,7 @@ systemctl enable --now transactional-update.timer transactional-update-cleanup.t
 </scripts>
 <files config:type="list">
 	<file>
-		<file_path>/etc/ssh/sshd_config.d/9999999tumbleweed.conf</file_path>
+		<file_path>/etc/ssh/sshd_config.d/50custom.conf</file_path>
 			<file_contents>
 <![CDATA[ChallengeResponseAuthentication no
 PasswordAuthentication no
