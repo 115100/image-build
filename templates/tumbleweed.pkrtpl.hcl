@@ -132,6 +132,9 @@ PrintMotd no
 		</file_contents>
 	</file>
 </files>
+<kdump>
+	<add_crash_kernel config:type="boolean">false</add_crash_kernel>
+</kdump>
 <firewall>
 	<zones config:type="list">
 		<zone>
